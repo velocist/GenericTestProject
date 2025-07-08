@@ -1,0 +1,11 @@
+{
+	"Logging": {
+		"Debug": {
+			"LogLevel": {
+				"Default": "Trace",
+				"Microsoft": "Trace",
+				"Microsoft.AspNetCore": "Trace"
+			}
+		}
+	}
+}

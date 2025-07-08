@@ -1,0 +1,11 @@
+{
+	"Logging": {
+		"Debug": {
+			"LogLevel": {
+				"Default": "Warning",
+				"Microsoft": "Warning",
+				"Microsoft.AspNetCore": "Warning"
+			}
+		}
+	}
+}
