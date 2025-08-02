@@ -1,7 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Newtonsoft.Json.Linq;
-using System;
-using velocist.Services.Json.Extensions;
+﻿using Newtonsoft.Json.Linq;
 
 namespace GenericTestProject.Json.Extensions {
 
@@ -85,7 +82,7 @@ namespace GenericTestProject.Json.Extensions {
         public void AddOrUpdateTokenByPath_ActualizaTokenExistente() {
             var newObject = JToken.FromObject(new { id = 3, name = "Updated" });
             var result = baseJson.AddOrUpdateTokenByPath("", "nested", newObject);
-            
+
             LogResults(result);
             Assert.IsNotNull(result);
             Assert.AreEqual(3, (int)result["nested"]["id"]);

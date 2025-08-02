@@ -1,10 +1,9 @@
-﻿using velocist.Services.Validations;
-using System;
+﻿using velocist.Validations;
 
 namespace GenericTestProject.Validations {
 
     [TestClass()]
-    public class IdentificationNumberValidationsHelperTests: BaseConfigureTest {
+    public class IdentificationNumberValidationsHelperTests : BaseConfigureTest {
 
         [TestMethod()]
         public void GetIdentificactionTypeTest() {

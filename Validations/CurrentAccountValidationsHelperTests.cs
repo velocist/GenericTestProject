@@ -1,9 +1,9 @@
-﻿using velocist.Services.Validations;
+﻿using velocist.Validations;
 
 namespace GenericTestProject.Validations {
 
     [TestClass()]
-    public class CurrentAccountValidationsHelperTests : BaseConfigureTest{
+    public class CurrentAccountValidationsHelperTests : BaseConfigureTest {
 
         [TestMethod()]
         public void IsValidTest() {

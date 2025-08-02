@@ -1,5 +1,3 @@
-using velocist.Services.Json.Helpers;
-
 namespace GenericTestProject.Json.Helpers {
     [TestClass]
     public class JsonConvertHelperTests : BaseConfigureTest {

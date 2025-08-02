@@ -1,7 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using velocist.Services.Formats;
-
-namespace GenericTestProject.Formats {
+﻿namespace GenericTestProject.Formats {
 
     [TestClass()]
     public class DateTimeHelperTests : BaseConfigureTest {
@@ -10,10 +7,10 @@ namespace GenericTestProject.Formats {
         public void EsFechaTest_ValidDate_ReturnsTrue() {
             // Arrange
             var validDate = "15/06/2025";
-            
+
             // Act
             var result = DateTimeHelper.EsFecha(validDate);
-            
+
             // Assert
             LogResults(result);
             Assert.IsTrue(result);
@@ -23,10 +20,10 @@ namespace GenericTestProject.Formats {
         public void EsFechaTest_InvalidDate_ReturnsFalse() {
             // Arrange
             var invalidDate = "32/13/2025";
-            
+
             // Act
             var result = DateTimeHelper.EsFecha(invalidDate);
-            
+
             // Assert
             LogResults(result);
             Assert.IsFalse(result);
@@ -36,10 +33,10 @@ namespace GenericTestProject.Formats {
         public void EsFechaTest_NullDate_ReturnsFalse() {
             // Arrange
             string nullDate = null;
-            
+
             // Act
             var result = DateTimeHelper.EsFecha(nullDate);
-            
+
             // Assert
             LogResults(result);
             Assert.IsFalse(result);
@@ -49,10 +46,10 @@ namespace GenericTestProject.Formats {
         public void EsFechaTest_EmptyDate_ReturnsFalse() {
             // Arrange
             var emptyDate = "";
-            
+
             // Act
             var result = DateTimeHelper.EsFecha(emptyDate);
-            
+
             // Assert
             LogResults(result);
             Assert.IsFalse(result);
@@ -62,10 +59,10 @@ namespace GenericTestProject.Formats {
         public void EsFechaValidaTest_ValidDate_ReturnsTrue() {
             // Arrange
             var validDate = "15/06/2025";
-            
+
             // Act
             var result = DateTimeHelper.EsFechaValida(validDate);
-            
+
             // Assert
             LogResults(result);
             Assert.IsTrue(result);
@@ -75,7 +72,7 @@ namespace GenericTestProject.Formats {
         public void EsFechaValidaTest_InvalidDate_ThrowsException() {
             // Arrange
             var invalidDate = "06/15/2025"; // Formato incorrecto
-            
+
             // Act & Assert
             LogResults($"Testing invalid date: {invalidDate}");
             Assert.ThrowsException<Exception>(() => DateTimeHelper.EsFechaValida(invalidDate));
@@ -85,7 +82,7 @@ namespace GenericTestProject.Formats {
         public void EsFechaValidaTest_NullValue_ThrowsException() {
             // Arrange
             object nullValue = null;
-            
+
             // Act & Assert
             LogResults("Testing null value");
             Assert.ThrowsException<Exception>(() => DateTimeHelper.EsFechaValida(nullValue));
@@ -120,7 +117,7 @@ namespace GenericTestProject.Formats {
         public void DevolverNombreMesTest_InvalidMonth_ReturnsEmptyString() {
             // Arrange
             var invalidMonths = new[] { 0, 13, -1, 99 };
-            
+
             // Act & Assert
             foreach (var month in invalidMonths) {
                 var result = DateTimeHelper.DevolverNombreMes(month);
@@ -158,7 +155,7 @@ namespace GenericTestProject.Formats {
         public void GetMonthTest_InvalidMonth_ReturnsEmptyString() {
             // Arrange
             var invalidMonths = new[] { 0, 13, -1, 99 };
-            
+
             // Act & Assert
             foreach (var month in invalidMonths) {
                 var result = DateTimeHelper.GetMonth(month);
@@ -196,7 +193,7 @@ namespace GenericTestProject.Formats {
         public void GetMonthTest_InvalidAbbreviation_ReturnsNull() {
             // Arrange
             var invalidAbbrs = new[] { "INV", "XYZ", "", null };
-            
+
             // Act & Assert
             foreach (var abbr in invalidAbbrs) {
                 var result = DateTimeHelper.GetMonth(abbr);
@@ -209,7 +206,7 @@ namespace GenericTestProject.Formats {
         public void DiccionarioMesesTest_ReturnsCorrectDictionary() {
             // Act
             var result = DateTimeHelper.DiccionarioMeses();
-            
+
             // Assert
             LogResults($"Dictionary count: {result.Count}");
             Assert.AreEqual(12, result.Count);
@@ -221,7 +218,7 @@ namespace GenericTestProject.Formats {
         public void ListaMesesTest_ReturnsCorrectList() {
             // Act
             var result = DateTimeHelper.ListaMeses();
-            
+
             // Assert
             LogResults($"List count: {result.Count}");
             Assert.AreEqual(12, result.Count);
@@ -233,7 +230,7 @@ namespace GenericTestProject.Formats {
         public void ListaSemanasTest_ReturnsCorrectList() {
             // Act
             var result = DateTimeHelper.ListaSemanas();
-            
+
             // Assert
             LogResults($"Weeks list count: {result.Count}");
             Assert.AreEqual(52, result.Count);

@@ -15,24 +15,37 @@
     <TestingPlatformShowTestsFailure>true</TestingPlatformShowTestsFailure>
     <SignAssembly>False</SignAssembly>
     <Copyright>2025</Copyright>
+    <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logger\**" />
+    <EmbeddedResource Remove="Logger\**" />
+    <None Remove="Logger\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="log4net" Version="3.1.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
     <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" Version="17.14.2" />
-    <PackageReference Include="Microsoft.Testing.Extensions.TrxReport" Version="1.7.3" />
-    <PackageReference Include="MSTest" Version="3.9.3" />
-    <PackageReference Include="MSTest.TestAdapter" Version="3.9.3" />
+    <PackageReference Include="Microsoft.Testing.Extensions.TrxReport" Version="1.8.0" />
+    <PackageReference Include="MSTest" Version="3.10.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.10.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\FacturacionOSS\FacturacionOSS.Business\FacturacionOSS.Business.csproj" />
-    <ProjectReference Include="..\..\FacturacionOSS\FacturacionOSS.Objects\FacturacionOSS.Objects.csproj" />
-    <ProjectReference Include="..\..\Genealogy\Genealogy.Business\Genealogy.Business.csproj" />
-    <ProjectReference Include="..\..\Genealogy\Genealogy.Objects\Genealogy.Objects.csproj" />
     <ProjectReference Include="..\..\ProjectsManager\ProjectsManager.Business\ProjectsManager.Business.csproj" />
+    <ProjectReference Include="..\..\ProjectsManager\ProjectsManager.Objects\ProjectsManager.Objects.csproj" />
+    <ProjectReference Include="..\..\velocist\velocist.DatabaseManager\velocist.DatabaseManager.csproj" />
+    <ProjectReference Include="..\..\velocist\velocist.EmailService\velocist.EmailService.csproj" />
+    <ProjectReference Include="..\..\velocist\velocist.Exceptions\velocist.Exceptions.csproj" />
+    <ProjectReference Include="..\..\velocist\velocist.FileIOManager\velocist.FileIOManager.csproj" />
+    <ProjectReference Include="..\..\velocist\velocist.Reflection\velocist.Reflection.csproj" />
+    <ProjectReference Include="..\..\velocist\velocist.Security\velocist.Security.csproj" />
+    <ProjectReference Include="..\..\velocist\velocist.Serialization\velocist.Serialization.csproj" />
     <ProjectReference Include="..\..\velocist\velocist.Services\velocist.Services.csproj" />
+    <ProjectReference Include="..\..\velocist\velocist.Utilities\velocist.Utilities.csproj" />
+    <ProjectReference Include="..\..\velocist\velocist.Validations\velocist.Validations.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,66 +55,6 @@
   <ItemGroup>
     <None Update="log4net.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Logger\LogSettings\ConsoleLog\logSettingsConsole-Debug.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Logger\LogSettings\ConsoleLog\logSettingsConsole-Error.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Logger\LogSettings\ConsoleLog\logSettingsConsole-Information.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Logger\LogSettings\ConsoleLog\logSettingsConsole-Trace.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Logger\LogSettings\ConsoleLog\logSettingsConsole-Warning.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Logger\LogSettings\DebugLog\logSettingsDebug-Debug.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Logger\LogSettings\DebugLog\logSettingsDebug-Error.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Logger\LogSettings\DebugLog\logSettingsDebug-Information.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Logger\LogSettings\DebugLog\logSettingsDebug-Trace.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Logger\LogSettings\DebugLog\logSettingsDebug-Warning.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Logger\LogSettings\LogLevel\logSettingsLogLevel-Debug.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Logger\LogSettings\LogLevel\logSettingsLogLevel-Error.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Logger\LogSettings\LogLevel\logSettingsLogLevel-Information.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Logger\LogSettings\LogLevel\logSettingsLogLevel-Trace.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Logger\LogSettings\LogLevel\logSettingsLogLevel-Warning.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Logger\LogSettings\logSettings-LogLevel.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Logger\Settings\log4netWithAll.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Logger\Settings\log4netWithConsoleAppender-Debug.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Logger\Settings\log4netWithConsoleAppender-Trace.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Logger\Settings\log4netWithRollingFileAppender.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 

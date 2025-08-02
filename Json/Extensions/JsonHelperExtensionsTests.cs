@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
-using velocist.Services.Json.Extensions;
+using velocist.Serialization.Extensions;
 
 namespace GenericTestProject.Json.Extensions {
 

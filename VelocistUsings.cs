@@ -1,3 +1,15 @@
-﻿global using velocist.Services.Json.Serialization;
-global using velocist.Services.Reflection;
-global using static velocist.Services.Log.StaticLoggerFactory;
+﻿global using velocist.Exceptions;
+global using velocist.Reflection;
+global using velocist.Security;
+global using velocist.Utilities;
+global using velocist.EmailService;
+global using velocist.FileIOManager;
+global using velocist.Serialization;
+global using velocist.Serialization.Converts;
+global using velocist.Serialization.Helpers;
+global using velocist.Serialization.References;
+global using velocist.Serialization.Extensions;
+global using velocist.Serialization.Serialization;
+global using velocist.Utilities.Extensions;
+global using velocist.Services.Formats;
+global using velocist.Utilities.Types;

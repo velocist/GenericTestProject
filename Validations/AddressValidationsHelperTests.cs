@@ -1,5 +1,4 @@
-﻿using velocist.Services.Validations;
-using System;
+﻿using velocist.Validations;
 
 namespace GenericTestProject.Validations {
 

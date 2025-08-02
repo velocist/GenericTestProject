@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Reflection;
 using Newtonsoft.Json.Linq;
-using velocist.Services.Core;
 
 namespace GenericTestProject {
 

@@ -1,11 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using velocist.Services.Validations;
-using System;
+﻿using velocist.Validations;
 
 namespace GenericTestProject.Validations {
 
     [TestClass()]
-    public class PhoneValidationsHelperTests : BaseConfigureTest{
+    public class PhoneValidationsHelperTests : BaseConfigureTest {
 
         [TestMethod()]
         public void IsValidTest() {

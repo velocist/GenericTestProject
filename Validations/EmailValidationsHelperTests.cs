@@ -1,9 +1,8 @@
-﻿using velocist.Services.Validations;
-using System;
+﻿using velocist.Validations;
 
 namespace GenericTestProject.Validations {
     [TestClass()]
-    public class EmailValidationsHelperTests : BaseConfigureTest{
+    public class EmailValidationsHelperTests : BaseConfigureTest {
         [TestMethod()]
         public void IsValidTest() {
             var result = EmailValidationsHelper.IsValid("prueba@gmail.com");

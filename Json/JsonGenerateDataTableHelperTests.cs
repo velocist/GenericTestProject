@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json.Linq;
-using velocist.Services.Json;
 
 namespace GenericTestProject.Json {
 
@@ -44,7 +43,7 @@ namespace GenericTestProject.Json {
         [DynamicData(nameof(GetTestCases), DynamicDataSourceType.Method)]
         public void GenerateDataTableColumnsDefs_FromObject_Works<T>(T input) where T : class {
             var result = JsonGenerateDataTableHelper.GenerateDataTableColumnsDefs<T>();
-                LogResults(result);
+            LogResults(result);
             Assert.IsNotNull(result);
         }
 
@@ -60,7 +59,7 @@ namespace GenericTestProject.Json {
         [DynamicData(nameof(GetTestCases), DynamicDataSourceType.Method)]
         public void GenerateDataTableColumnsList_Works<T>(T input) where T : class {
             var result = JsonGenerateDataTableHelper.GenerateDataTableColumnsList<T>();
-                LogResults(result);
+            LogResults(result);
             Assert.IsNotNull(result);
         }
     }
