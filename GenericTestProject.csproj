@@ -36,16 +36,19 @@
   <ItemGroup>
     <ProjectReference Include="..\..\ProjectsManager\ProjectsManager.Business\ProjectsManager.Business.csproj" />
     <ProjectReference Include="..\..\ProjectsManager\ProjectsManager.Objects\ProjectsManager.Objects.csproj" />
-    <ProjectReference Include="..\..\velocist\velocist.DatabaseManager\velocist.DatabaseManager.csproj" />
-    <ProjectReference Include="..\..\velocist\velocist.EmailService\velocist.EmailService.csproj" />
-    <ProjectReference Include="..\..\velocist\velocist.Exceptions\velocist.Exceptions.csproj" />
-    <ProjectReference Include="..\..\velocist\velocist.FileIOManager\velocist.FileIOManager.csproj" />
-    <ProjectReference Include="..\..\velocist\velocist.Reflection\velocist.Reflection.csproj" />
-    <ProjectReference Include="..\..\velocist\velocist.Security\velocist.Security.csproj" />
-    <ProjectReference Include="..\..\velocist\velocist.Serialization\velocist.Serialization.csproj" />
-    <ProjectReference Include="..\..\velocist\velocist.Services\velocist.Services.csproj" />
-    <ProjectReference Include="..\..\velocist\velocist.Utilities\velocist.Utilities.csproj" />
-    <ProjectReference Include="..\..\velocist\velocist.Validations\velocist.Validations.csproj" />
+    <ProjectReference Include="..\velocist.DatabaseManager\velocist.DatabaseManager.csproj" />
+    <ProjectReference Include="..\velocist.EmailService\velocist.EmailService.csproj" />
+    <ProjectReference Include="..\velocist.Exceptions\velocist.Exceptions.csproj" />
+    <ProjectReference Include="..\velocist.FileIOManager\velocist.FileIOManager.csproj" />
+    <!--<ProjectReference Include="..\velocist.FileStorageService\velocist.FileStorageService.csproj" />-->
+    <ProjectReference Include="..\velocist.LogService\velocist.LogService.csproj" />
+    <!--<ProjectReference Include="..\velocist.MySqlDataAccess\velocist.MySqlDataAccess.csproj" />-->
+    <ProjectReference Include="..\velocist.Reflection\velocist.Reflection.csproj" />
+    <ProjectReference Include="..\velocist.Security\velocist.Security.csproj" />
+    <ProjectReference Include="..\velocist.Serialization\velocist.Serialization.csproj" />
+    <ProjectReference Include="..\velocist.Services\velocist.Services.csproj" />
+    <ProjectReference Include="..\velocist.Utilities\velocist.Utilities.csproj" />
+    <ProjectReference Include="..\velocist.Validations\velocist.Validations.csproj" />
   </ItemGroup>
 
   <ItemGroup>
